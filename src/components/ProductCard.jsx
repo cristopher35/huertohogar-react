@@ -18,7 +18,7 @@ function ProductCard({ producto, onAgregar }) {
     <div className="card h-100 shadow-sm">
       <Link to={`/producto/${producto.id}`}>
         <img
-          src={producto.imagen}
+          src={`${import.meta.env.BASE_URL}${producto.imagen.replace(/^\//, '')}`}
           className="card-img-top"
           alt={producto.nombre}
           style={{ height: '180px', objectFit: 'cover' }}
